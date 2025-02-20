@@ -1,7 +1,7 @@
-package com.tienda.Services;
+package com.tienda.services;
 
-import com.tienda.Models.Category;
-import com.tienda.Repositories.CategoryRepository;
+import com.tienda.models.Category;
+import com.tienda.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

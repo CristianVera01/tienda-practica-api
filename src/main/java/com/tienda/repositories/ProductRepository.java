@@ -1,6 +1,6 @@
-package com.tienda.Repositories;
+package com.tienda.repositories;
 
-import com.tienda.Models.Product;
+import com.tienda.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
