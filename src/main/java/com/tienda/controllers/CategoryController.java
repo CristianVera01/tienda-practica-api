@@ -37,4 +37,11 @@ public class CategoryController {
     categoryService.delCategoryById(id);
     return "Categoria Eliminada";
 }
+
+@GetMapping("/find/{name}")
+    public Category getCategoryByName(@PathVariable String name) {
+    return categoryService.getCategoryByName(name);
+}
+
+
 }
