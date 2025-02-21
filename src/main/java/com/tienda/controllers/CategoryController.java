@@ -12,36 +12,37 @@ import java.util.List;
 
 public class CategoryController {
 
-@Autowired
+    @Autowired
     private CategoryService categoryService;
 
-@GetMapping()
-    public List<Category> getAllCategories(){
-    return categoryService.getAllCategories();
+    @GetMapping()
+    public List<Category> getAllCategories() {
+        return categoryService.getAllCategories();
 
-}
+    }
 
-@PostMapping("/add")
-    public Category addCategory(@RequestBody Category category){
-    return categoryService.saveCategory(category);
+    @PostMapping("/add")
+    public Category addCategory(@RequestBody Category category) {
+        return categoryService.saveCategory(category);
 
-}
-@GetMapping("/getCatById/{id}")
-    public Category getCategoryById(@PathVariable Long id){
-    return categoryService.getCategoryById(id);
+    }
 
-}
+    @GetMapping("/getCatById/{id}")
+    public Category getCategoryById(@PathVariable Long id) {
+        return categoryService.getCategoryById(id);
 
-@DeleteMapping("/delCategory/{id}")
-    public String delCategoryById(@PathVariable Long id){
-    categoryService.delCategoryById(id);
-    return "Categoria Eliminada";
-}
+    }
 
-@GetMapping("/find/{name}")
+    @DeleteMapping("/delCategory/{id}")
+    public String delCategoryById(@PathVariable Long id) {
+        categoryService.delCategoryById(id);
+        return "Categoria Eliminada";
+    }
+
+    @GetMapping("/find/{name}")
     public Category getCategoryByName(@PathVariable String name) {
-    return categoryService.getCategoryByName(name);
-}
+        return categoryService.getCategoryByName(name);
+    }
 
 
 }

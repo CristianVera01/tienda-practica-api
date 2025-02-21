@@ -33,6 +33,8 @@ public class CategoryService {
 
     public Category getCategoryByName(String name) {
         return categoryrepository.findCategoryByName(name).orElse(null);
-    };
+    }
+
+    ;
 
 }
